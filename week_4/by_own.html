@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week-3</title>
+    <style>
+      #inp1 {
+        width: 200px;
+        height: 2rem;
+        padding: 0.5rem;
+      }
+      #out1 {
+        border: 5px solid;
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" style="margin: 2rem">
+      <input
+        type="number"
+        name="searchTxt"
+        id="inp1"
+        placeholder="enter a number form 0 to 999"
+      />
+      <br />
+      <input type="button" value="Click me" id="btn1" />
+      <p id="out1"></p>
+    </form>
+
+    <script>
+      let inp1 = document.getElementById("inp1");
+      let btn1 = document.getElementById("btn1");
+      let out1 = document.getElementById("out1");
+
+      //   console.log(a);
+
+      function fn() {
+        out1.innerHTML = inp1.value;
+        let a = inp1.value;
+
+        console.log(a);
+        // return a
+      }
+      out1.innerHTML = inp1.value;
+      let a = inp1.value;
+      console.log(a);
+
+      function test(a){
+
+      
+          if (a < 0) return false;
+
+          // Arrays to hold words for single-digit, double-digit, and below-hundred numbers
+          single_digit = [
+            "",
+            "One",
+            "Two",
+            "Three",
+            "Four",
+            "Five",
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine",
+          ];
+          double_digit = [
+            "Ten",
+            "Eleven",
+            "Twelve",
+            "Thirteen",
+            "Fourteen",
+            "Fifteen",
+            "Sixteen",
+            "Seventeen",
+            "Eighteen",
+            "Nineteen",
+          ];
+          below_hundred = [
+            "Twenty",
+            "Thirty",
+            "Forty",
+            "Fifty",
+            "Sixty",
+            "Seventy",
+            "Eighty",
+            "Ninety",
+          ];
+
+          if (a === 0) return "Zero";
+
+          // Recursive function to translate the number into words
+          function translate(a) {
+            let word = "";
+            if (a < 10) {
+              word = single_digit[a] + " ";
+            } else if (a < 20) {
+              word = double_digit[a - 10] + " ";
+            } else if (a < 100) {
+              let rem = translate(a % 10);
+              word = below_hundred[(a - (a % 10)) / 10 - 2] + " " + rem;
+            } else if (a < 1000) {
+              word =
+                single_digit[Math.trunc(a / 100)] +
+                " Hundred " +
+                translate(a % 100);
+            } else {
+              console.log("Out of the range")
+            }
+            return word;
+          }
+
+          // Get the result by translating the given number
+          let result = translate(a);
+          return result.trim() + ".";
+
+        }
+      
+
+      btn1.addEventListener("click", fn);   
+      btn1.addEventListener("click", test());   
+    </script>
+  </body>
+</html>
