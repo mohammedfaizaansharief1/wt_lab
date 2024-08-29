@@ -1,3 +1,18 @@
 # wt_lab
 wt_lab
-<samp>asdsd</samp>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <frameset rows="30% ,70%">
+        <frame name="f1" src="head.html"></frame>
+    <frameset cols="20% ,80%">
+        <frame name="f2" src="left.html"></frame>
+        <frame name="f3" src="right.html"></frame>
+    </frameset>
+</head>
+<body>
+</body>
+</html>
