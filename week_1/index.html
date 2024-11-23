@@ -1,0 +1,59 @@
+<!-- Create a Regstration page using html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <style>
+        .container{
+            border: 1px solid;
+            width: 500px;
+            height: 550px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+            background: url(https://cdn.pixabay.com/photo/2017/04/05/04/44/background-2203989_1280.jpg) no-repeat fixed center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registration Page</h1>
+      <form action="">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="" size="15" /><br /><br />
+        <label for="middlename">Middle Name</label>
+        <input type="text" name="middlename" id="" size="15" /><br /><br />
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="" size="15" /><br /><br />
+        <label for="gender">Gender Name</label>
+        <input type="radio" name="gender" id="" /> Female
+        <input type="radio" name="gender" id="" /> Male<br /><br />
+        <label for="course">Course</label>
+        <input type="radio" name="course" id="" />B.Tech
+        <input type="radio" name="course" id="" />B.Sc
+        <input type="radio" name="course" id="" />M.tech
+        <input type="radio" name="course" id="" />MBA<br /><br />
+        <label for="year">Year</label>
+        <select name="year" id="">
+          <option value="year">Select your year</option>
+          <option value="firstyear">First Year</option>
+          <option value="secondyear">Second Year</option>
+          <option value="thirdyear">Third Year</option>
+          <option value="fourthyear">Fourth Year</option></select
+        ><br /><br />
+        <label for="subjects">Subjects</label>
+        <input type="checkbox" name="subjects" id="" />Web Technologies
+        <input type="checkbox" name="subjects" id="" />Computer Networks
+        <input type="checkbox" name="subjects" id="" />Flutter
+        <input type="checkbox" name="subjects" id="" />Flat<br /><br />
+        <input type="submit" value="submit" />
+        <input type="reset" value="reset" />
+      </form>
+    </div>
+  </body>
+</html>
