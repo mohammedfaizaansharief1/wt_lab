@@ -1,0 +1,72 @@
+<!-- Validate the fields of registration page created in 1st experimment using Regular Expressions. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <script>
+      function validate() {
+        var msg = "";
+
+        var user = document.register.uname.value;
+        var run = new RegExp("^[A-Za-z0-9]");
+
+        var pwd = document.register.pawd.value;
+        var rpwd =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+
+        var emailid = document.register.eid.value;
+        var echeck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        var phone = document.register.aphone.value;
+        var rphone = /^\+?[1-9][0-9]{7,14}$/;
+
+        if (!user.match(run)) msg += "Username should contain _ characters";
+        if (!pwd.match(rpwd)) msg += "Password should contain atleast 6 characters";
+        if (!emailid.match(echeck)) msg += "Email should be of a@xyz.com pattern";
+        if (!phone.match(rphone)) msg += "Enter 10 digit phone number";
+        if (msg != " ") {
+          alert("Submitted sucessfully");
+          return false;
+        }
+        document.register.action = "#";
+      }
+    </script>
+  </head>
+  <body>
+    <form action="" name="register" onsubmit="return validate()">
+      <label for="uname">User Name</label>
+      <input type="text" name="uname" id="" size="15" /><br /><br />
+      <label for="pawd">Password</label>
+      <input type="password" name="pawd" id="" size="15" /><br /><br />
+      <label for="eid">Email id:</label>
+      <input type="email" name="eid" id="" size="15" /><br /><br />
+      <label for="aphone">Phone no:</label>
+      <input type="number" name="aphone" id=""><br><br>
+      <label for="gender">Gender:</label>
+      <input type="radio" name="gender" id="gender" value="Female"/> Female
+      <input type="radio" name="gender" id="gender" value="Male" /> Male<br /><br />
+      <label for="course">Course</label>
+      <input type="radio" name="course" id="" />B.Tech
+      <input type="radio" name="course" id="" />B.Sc
+      <input type="radio" name="course" id="" />M.tech
+      <input type="radio" name="course" id="" />MBA<br /><br />
+      <label for="year">Year</label>
+      <select name="year" id="">
+        <option value="year">Select your year</option>
+        <option value="firstyear">First Year</option>
+        <option value="secondyear">Second Year</option>
+        <option value="thirdyear">Third Year</option>
+        <option value="fourthyear">Fourth Year</option></select
+      ><br /><br />
+      <label for="subjects">Subjects</label>
+      <input type="checkbox" name="subjects" id="" />Web Technologies
+      <input type="checkbox" name="subjects" id="" />Computer Networks
+      <input type="checkbox" name="subjects" id="" />Flutter
+      <input type="checkbox" name="subjects" id="" />Flat<br /><br />
+      <input type="submit" value="submit" />
+      <input type="reset" value="reset" />
+    </form>
+  </body>
+</html>
