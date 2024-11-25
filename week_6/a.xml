@@ -1,0 +1,22 @@
+<!-- Write program on XML, XSD and DTD on books? -->
+<?XML version="1.0">
+    <?xml-stylesheet type="text/xsl" href="book.xsl"/>
+    <!DOCTYPE bookinfo "system" "lab.dtd">
+    <bookinfo>
+        <book>
+            <title>Webdevelopment</title>
+            <author>Chris</author>
+            <isbn>02345655</isbn>
+            <price>2222</price>
+        </book>
+        <book>
+            <title>computernetworks</title>
+            <author>JKrowling</author>
+            <isbn>02345622</isbn>
+            <price>55211</price>
+        </book>
+    </bookinfo>
+
+
+<!-- Remaining program has the different files associated with it like book.dtd,book.xsd,book.xsl,etc.. -->
+<!-- and it is uanble to understand right now how they are working currently.. -->
