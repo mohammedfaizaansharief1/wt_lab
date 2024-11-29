@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="book.xsl"?>
+<!DOCTYPE book-info SYSTEM "book.dtd">
+<book-info>
+<books>
+<titleofthebook>web programming</titleofthebook>
+<Authorname>chris bates</Authorname>
+<ISBNnumber>123-333</ISBNnumber>
+<publication>willy</publication>
+<edition>2nd</edition>
+<price>435</price>
+</books>
+<books>
+<titleofthebook>compiler design</titleofthebook>
+<Authorname>ulmon</Authorname>
+<ISBNnumber>1223-333</ISBNnumber>
+<publication>pearson</publication>
+<edition>2nd</edition>
+<price>475</price>
+</books>
+</book-info>

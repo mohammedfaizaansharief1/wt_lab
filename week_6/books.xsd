@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/xmlschema">
+<!-- targetNamespace="http://my_namespace" xmlns="http:/my_namespace">-->
+<xsd:element name="book-info">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="books" >
+<!--minoccurs="1" maxoccrs="4">-->
+<xsd:sequence>
+<xsd:element name="titleofthebook" xsd:type="xsd:string"/><xsd:element name="Authorname" xsd:type="xsd:string"/>
+<xsd:element name="ISBNnumber"xsd:type:"xsd:decimal"/>
+<xsd:element name="edition" xsd:type:"xsd:string"/>
+<xsd:element name="price" xsd:type:"xsd:decimal"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
