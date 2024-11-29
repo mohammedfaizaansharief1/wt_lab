@@ -1,3 +1,6 @@
+// Week 7: Create an XML document that contains 10 users information. Write a Java program, which takes User Id as input and returns the user details by taking the user information from the XML document using DOM Parser.
+
+
 // package week_7;
 
 import java.io.File;
